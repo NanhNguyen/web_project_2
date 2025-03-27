@@ -1,0 +1,171 @@
+/* 
+filename: enhancements.css
+author: Nguyen Nam Anh, Do Minh Thanh, Do Thanh Vinh
+created: 2025-02-06
+last modified: 2025-02-23
+description: This CSS file is used to style the HTML elements of the enhancements page.
+ */
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #e0f2fe;
+  margin: 0;
+  padding-top: 80px;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.header-container nav a {
+  margin-left: 2rem;
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.header-container nav a:hover {
+  color: #3182ce;
+}
+.header-container .auth a {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.header-container .auth .sign-in:hover {
+  color: #3182ce;
+}
+.header-container .auth .sign-up {
+  background-color: #3182ce;
+  color: #ffffff;
+}
+.header-container .auth .sign-up:hover {
+  background-color: #2b6cb0;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+.enhancement {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+.enhancement h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.enhancement p {
+  color: #4a5568;
+}
+.enhancement .tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  color: #3182ce;
+  text-decoration: underline;
+}
+.enhancement .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.enhancement .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+.enhancement .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.content-container {
+  padding-top: 3rem;
+}
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-container .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.header-container nav a {
+  margin-left: 2rem;
+  color: #4a5568;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.header-container nav a:hover {
+  color: #3182ce;
+}
+.header-container .auth a {
+  margin-left: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+.header-container .auth .sign-in:hover {
+  color: #3182ce;
+}
+.header-container .auth .sign-up {
+  background-color: #3182ce;
+  color: #ffffff;
+}
+.header-container .auth .sign-up:hover {
+  background-color: #2b6cb0;
+}
+
+.content-container {
+  padding-top: 3rem;
+}
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+}
+.logo img {
+  max-height: 70px;
+  width: auto;
+}
