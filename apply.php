@@ -24,7 +24,7 @@
       ?>
     <main class="container">
       <h1 class="content-container">Job Application</h1>
-      <form action="database/process_eoi.php" method="post">
+      <form action="process_eoi.php" method="post">
         <div>
           <label for="job-ref"
             >Job Reference Number

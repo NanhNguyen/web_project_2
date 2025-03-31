@@ -15,22 +15,23 @@ $table_sql = "CREATE TABLE IF NOT EXISTS eoi (
     postcode CHAR(4) NOT NULL,
     email VARCHAR(100) NOT NULL,
     phone VARCHAR(12) NOT NULL,
-    skills TEXT,
+    skills TEXT,  -- Stores multiple skills as a comma-separated string
     other_skills TEXT
 )";
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($table_sql) === TRUE) {
     echo "Table 'eoi' created successfully or already exists.";
 } else {
     echo "Error creating table: " . $conn->error;
 }
-// Step 2: Check if Form was Submitted
 
+// Step 2: Check if Form was Submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     function clean_input($data) {
         return htmlspecialchars(stripslashes(trim($data)));
     }
 
+    // Retrieve Form Data
     $job_ref = clean_input($_POST['job-ref']);
     $first_name = clean_input($_POST['first-name']);
     $last_name = clean_input($_POST['last-name']);
@@ -42,9 +43,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $postcode = clean_input($_POST['postcode']);
     $email = clean_input($_POST['email']);
     $phone = clean_input($_POST['phone']);
-    $skills = isset($_POST['skills']) ? implode(", ", $_POST['skills']) : "";
+    
+    // Handling Checkboxes (Convert Array to String)
+    $skills = isset($_POST['skills']) && is_array($_POST['skills']) ? implode(", ", $_POST['skills']) : "";
+
     $other_skills = clean_input($_POST['other-skills']);
 
+    // Input Validation
     if (!preg_match("/^[A-Za-z0-9]{5}$/", $job_ref) ||
         !preg_match("/^[A-Za-z ]{1,20}$/", $first_name) ||
         !preg_match("/^[A-Za-z ]{1,20}$/", $last_name) ||
@@ -57,17 +62,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Invalid input data. Please go back and correct your details.");
     }
 
-    $stmt = $conn->prepare("INSERT INTO eoi (job_ref, first_name, last_name, dob, gender, address, suburb, state, postcode, email, phone, skills, other_skills) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    // Prepared Statement
+    $stmt = $conn->prepare("INSERT INTO eoi (job_ref, first_name, last_name, dob, gender, address, suburb, state, postcode, email, phone, skills, other_skills) 
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+
+    if ($stmt === false) {
+        die("Error preparing statement: " . $conn->error);
+    }
+
     $stmt->bind_param("sssssssssssss", $job_ref, $first_name, $last_name, $dob, $gender, $address, $suburb, $state, $postcode, $email, $phone, $skills, $other_skills);
-    
+
     if ($stmt->execute()) {
         $eoi_id = $stmt->insert_id;
         echo "<p>Application submitted successfully! Your EOI Number is: $eoi_id</p>";
     } else {
         echo "Error: " . $stmt->error;
     }
-    
+
     $stmt->close();
 }
+
 $conn->close();
 ?>

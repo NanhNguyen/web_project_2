@@ -58,7 +58,7 @@
             <li>Knowledge of Agile methodologies</li>
             <li>Excellent communication skills</li>
           </ul>
-          <form action="apply.html" method="get">
+          <form action="apply.php" method="get">
             <input type="hidden" name="job-ref" value="SE123" />
             <button type="submit">Apply</button>
           </form>
@@ -105,7 +105,7 @@
             <li>Knowledge of data visualization tools (e.g., Tableau)</li>
             <li>Strong analytical and problem-solving skills</li>
           </ul>
-          <form action="apply.html" method="get">
+          <form action="apply.php" method="get">
             <input type="hidden" name="job-ref" value="DS456" />
             <button type="submit">Apply</button>
           </form>
@@ -150,7 +150,7 @@
             <li>Knowledge of compliance standards (e.g., ISO 27001, NIST)</li>
             <li>Excellent communication skills</li>
           </ul>
-          <form action="apply.html" method="get">
+          <form action="apply.php" method="get">
             <input type="hidden" name="job-ref" value="CS789" />
             <button type="submit">Apply</button>
           </form>

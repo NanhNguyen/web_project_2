@@ -1,8 +1,8 @@
 <nav>
-  <a href="index.html">Home</a>
-  <a href="jobs.html">Jobs</a>
-  <a href="apply.html">Application</a>
-  <a href="about.html">About</a>
-  <a href="enhancements.html">Enhancements</a>
-  <a href="contact.html">Contact</a>
+  <a href="index.php">Home</a>
+  <a href="jobs.php">Jobs</a>
+  <a href="apply.php">Application</a>
+  <a href="about.php">About</a>
+  <a href="enhancements.php">Enhancements</a>
+  <a href="contact.php">Contact</a>
 </nav>

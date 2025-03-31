@@ -34,7 +34,7 @@
           </p>
           <div>
             <button class="button1">
-              <nav><a href="jobs.html">Get Started</a></nav>
+              <nav><a href="jobs.php">Get Started</a></nav>
             </button>
             <button class="button1">
               <nav>
