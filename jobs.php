@@ -19,23 +19,9 @@
     <link rel="stylesheet" href="styles/jobs.css" />
   </head>
   <body>
-    <header>
-      <div class="header-container">
-        <div class="logo"><img src="images/logo1.png" alt="Logo" /></div>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="jobs.html">Jobs</a>
-          <a href="apply.html">Application</a>
-          <a href="about.html">About</a>
-          <a href="enhancements.html">Enhancements</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-        <div class="auth">
-          <a href="#" class="sign-in">Sign in</a>
-          <a href="#" class="sign-up">Sign Up</a>
-        </div>
-      </div>
-    </header>
+  <?php
+      include 'header.inc';
+      ?>
     <main class="container">
       <div class="job-list">
         <section class="job-box">
