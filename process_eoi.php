@@ -1,4 +1,5 @@
 <?php
+session_start(); // Start session to store form data
 include 'settings.php'; // Include database connection and table creation
 
 // Step 1: Create Table if it Doesn't Exist
@@ -25,29 +26,32 @@ if ($conn->query($table_sql) === TRUE) {
     echo "Error creating table: " . $conn->error;
 }
 
+function clean_input($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
+}
+
 // Step 2: Check if Form was Submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    function clean_input($data) {
-        return htmlspecialchars(stripslashes(trim($data)));
-    }
+    // Store Form Data in Session
+    $_SESSION['form_data'] = $_POST;
 
-    // Retrieve Form Data
-    $job_ref = clean_input($_POST['job-ref']);
-    $first_name = clean_input($_POST['first-name']);
-    $last_name = clean_input($_POST['last-name']);
-    $dob = clean_input($_POST['dob']);
-    $gender = clean_input($_POST['gender']);
-    $address = clean_input($_POST['address']);
-    $suburb = clean_input($_POST['suburb']);
-    $state = clean_input($_POST['state']);
-    $postcode = clean_input($_POST['postcode']);
-    $email = clean_input($_POST['email']);
-    $phone = clean_input($_POST['phone']);
+    // Retrieve Form Data from Session
+    $job_ref = clean_input($_SESSION['form_data']['job-ref']);
+    $first_name = clean_input($_SESSION['form_data']['first-name']);
+    $last_name = clean_input($_SESSION['form_data']['last-name']);
+    $dob = clean_input($_SESSION['form_data']['dob']);
+    $gender = clean_input($_SESSION['form_data']['gender']);
+    $address = clean_input($_SESSION['form_data']['address']);
+    $suburb = clean_input($_SESSION['form_data']['suburb']);
+    $state = clean_input($_SESSION['form_data']['state']);
+    $postcode = clean_input($_SESSION['form_data']['postcode']);
+    $email = clean_input($_SESSION['form_data']['email']);
+    $phone = clean_input($_SESSION['form_data']['phone']);
     
     // Handling Checkboxes (Convert Array to String)
-    $skills = isset($_POST['skills']) && is_array($_POST['skills']) ? implode(", ", $_POST['skills']) : "";
-
-    $other_skills = clean_input($_POST['other-skills']);
+    $skills = isset($_SESSION['form_data']['skills']) && is_array($_SESSION['form_data']['skills']) ? implode(", ", array_map('clean_input', $_SESSION['form_data']['skills'])) : '';
+    
+    $other_skills = clean_input($_SESSION['form_data']['other-skills']);
 
     // Input Validation
     if (!preg_match("/^[A-Za-z0-9]{5}$/", $job_ref) ||
@@ -75,12 +79,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($stmt->execute()) {
         $eoi_id = $stmt->insert_id;
         echo "<p>Application submitted successfully! Your EOI Number is: $eoi_id</p>";
+        unset($_SESSION['form_data']); // Clear session data after successful submission
     } else {
         echo "Error: " . $stmt->error;
     }
 
-    $stmt->close();
 }
-
+$stmt->close();
 $conn->close();
 ?>

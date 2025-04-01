@@ -24,7 +24,7 @@
       ?>
     <main class="container">
       <h1 class="content-container">Job Application</h1>
-      <form action="process_eoi.php" method="post">
+      <form action="process_eoi.php" method="post", novalidate ="novalidate">
         <div>
           <label for="job-ref"
             >Job Reference Number
@@ -202,27 +202,27 @@
             <legend>Skills</legend>
             <div class="checkbox-group">
               <label>
-                <input type="checkbox" name="skills" value="HTML" />
+                <input type="checkbox" name="skills[]" value="HTML" />
                 HTML
               </label>
               <label>
-                <input type="checkbox" name="skills" value="CSS" />
+                <input type="checkbox" name="skills[]" value="CSS" />
                 CSS
               </label>
               <label>
-                <input type="checkbox" name="skills" value="JavaScript" />
+                <input type="checkbox" name="skills[]" value="JavaScript" />
                 JavaScript
               </label>
               <label>
-                <input type="checkbox" name="skills" value="Python" />
+                <input type="checkbox" name="skills[]" value="Python" />
                 Python
               </label>
               <label>
-                <input type="checkbox" name="skills" value="Java" />
+                <input type="checkbox" name="skills[]" value="Java" />
                 Java
               </label>
               <label>
-                <input type="checkbox" name="skills" value="Other" />
+                <input type="checkbox" name="skills[]" value="Other" />
                 Other skills...
               </label>
             </div>
