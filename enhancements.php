@@ -21,23 +21,7 @@
       ?>
     <main class="container">
       <h1>Enhancements</h1>
-      <div class="enhancement">
-        <h2>Tooltip Enhancement</h2>
-        <p>
-          We have added tooltips to provide additional information when users
-          hover over certain elements. This enhancement improves the user
-          experience by providing helpful hints and explanations without
-          cluttering the interface.
-        </p>
-        <p>
-          For example, hover over the word
-          <span class="tooltip"
-            >tooltip
-            <span class="tooltiptext">This is a tooltip example.</span>
-          </span>
-          to see the tooltip in action.
-        </p>
-      </div>
+      
       <div class="enhancement">
         <h2>Dark Mode</h2>
         <p>

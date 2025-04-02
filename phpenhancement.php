@@ -55,7 +55,7 @@
     }
 
     .dark-mode dl, .dark-mode dt, .dark-mode dd {
-        background-color: #121212 !important;
+        background-color: #1e1e1e !important;
         color: #ffffff !important;
     }
 
@@ -78,7 +78,7 @@
 
     /* Hero section in dark mode (index.php) */
     .dark-mode .hero-content {
-        background-color: #121212 !important;
+        background-color: #1e1e1e !important;
         color: #ffffff !important;
     }
 

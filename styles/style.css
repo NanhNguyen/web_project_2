@@ -123,9 +123,7 @@ header {
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
-.feature-box p {
-  color: #4a5568;
-}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -154,7 +152,6 @@ header {
 }
 .hero-text p {
   font-size: 1.25rem;
-  color: #4a5568;
   margin-bottom: 2rem;
 }
 .hero-text button {
@@ -201,7 +198,6 @@ header {
 .hero-image .profile span {
   display: block;
   font-size: 0.875rem;
-  color: #4a5568;
 }
 .hero-image .icon {
   position: absolute;

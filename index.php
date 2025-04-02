@@ -56,7 +56,7 @@
       </section>
       <section class="features">
         <div class="feature-box">
-          <img src="images/UI.jpg" alt="UI/UX Design " />
+          <img src="images/UI.png" alt="UI/UX Design " />
           <h3>UI/UX Design</h3>
         </div>
         <div class="feature-box">
@@ -64,11 +64,11 @@
           <h3>Machine Learning</h3>
         </div>
         <div class="feature-box">
-          <img src="images/data.jpg" alt="Data icon" />
+          <img src="images/data.png" alt="Data icon" />
           <h3>Data Analysis</h3>
         </div>
         <div class="feature-box">
-          <img src="images/cyber.jpg" alt="cyber" />
+          <img src="images/cyber.png" alt="cyber" />
           <h3>Cyber Security</h3>
         </div>
       </section>

@@ -5,5 +5,5 @@
   <a href="about.php">About</a>
   <a href="enhancements.php">Enhancements</a>
   <a href="contact.php">Contact</a>
-  <?php include "darkmode.php"; ?>
+  <?php include "phpenhancement.php"; ?>
 </nav>
