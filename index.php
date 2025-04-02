@@ -26,7 +26,7 @@
           <p>Any industry, Any location, Any experience level 🌟</p>
           <h1>
             Your dream job is waiting
-            <span id="here1"><a href="jobs.html">here</a></span>
+            <span id="here1"><a href="jobs.php">here</a></span>
           </h1>
           <p>
             Let your talents, personality and potential do the talking. We give

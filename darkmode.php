@@ -10,7 +10,7 @@
 
     /* Links in dark mode */
     .dark-mode a {
-        color: #bb86fc !important;
+        color: #ffffff !important;
     }
 
     /* Dark mode toggle button */
