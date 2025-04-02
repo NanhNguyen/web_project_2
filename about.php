@@ -1,40 +1,28 @@
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Portal</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles/about.css" />
   </head>
   <body>
     <?php
       include 'header.inc';
-      ?>
+    ?>
     <main class="container">
       <h1 class="about-heading">About Us</h1>
       <dl>
         <dt>Group Name: Group 21</dt>
-        <p></p>
         <dd>- Innovators: Nguyễn Nam Anh</dd>
         <dt>Group ID</dt>
-        <p></p>
         <dd>- Group 21</dd>
         <dt>Tutor's Name</dt>
-        <p></p>
         <dd>- Vũ Ngọc Bình</dd>
         <dt>Members Contribution</dt>
         <dd>
-          <p></p>
           <strong>Nguyễn Nam Anh:</strong> Project Manager, Frontend Developer
         </dd>
         <dd><strong>Đỗ Minh Thành:</strong> Designer</dd>
@@ -74,8 +62,8 @@
       <p>
         <form action="contact.html" method="get">
             <input type="hidden" name="job-ref" value="CS789" />
-            <button type="email">Email Us</button>
-          </form>
+            <button type="submit">Email Us</button> <!-- Fixed button type -->
+        </form>
       </p>
       <div class="extra-info">
         <h2>Group Profile</h2>
@@ -91,10 +79,7 @@
           <li>Minh Thành: 5 years in UI/UX Design</li>
           <li>Thành Vinh: 4 years in Testing and Debugging</li>
         </ul>
-        
-        </ul>
       </div>
     </main>
   </body>
 </html>
-

@@ -17,9 +17,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <?php include "header.inc"; ?>
   </head>
   <body>
-    <?php include "header.inc"; ?>
     <main class="container">
       <section class="hero-content">
         <div class="hero-text">

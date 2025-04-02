@@ -38,6 +38,15 @@
           to see the tooltip in action.
         </p>
       </div>
+      <div class="enhancement">
+        <h2>Dark Mode</h2>
+        <p>
+        We have added a dark mode option to the website, allowing users to switch to a darker color scheme for a more comfortable viewing experience, especially in low-light environments. This enhancement improves usability by reducing eye strain and providing a visually appealing alternative to the default light mode.
+        </p>
+        <p>
+          For example, toggle the button on the top right of the menu to switch between light and dark modes.
+        </p>
+      </div>
     </main>
   </body>
 </html>
